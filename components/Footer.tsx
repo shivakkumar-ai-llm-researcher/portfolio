@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react';
-import { Terminal, ArrowUp, Github, Linkedin } from 'lucide-react';
+import { ArrowUp, Github, Linkedin } from 'lucide-react';
+import Logo from './Logo';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -13,10 +14,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Brand & System Status */}
         <div className="flex flex-col items-center md:items-start gap-2">
-          <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center text-white">
-              <Terminal className="w-3.5 h-3.5" />
-            </div>
+          <div className="flex items-center gap-2.5 group">
+            <Logo size="sm" />
             <span className="font-bold text-sm text-slate-900 dark:text-white tracking-tight">Sivakumar</span>
           </div>
 

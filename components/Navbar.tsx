@@ -1,8 +1,9 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Terminal, Download, Menu, X, ArrowUpRight, Sun, Moon } from 'lucide-react';
+import { Download, Menu, X, ArrowUpRight, Sun, Moon } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
+import Logo from './Logo';
 
 const navItems = [
   { label: 'About', href: '#about' },
@@ -54,9 +55,7 @@ export default function Navbar() {
           className="flex items-center group focus:outline-none"
           aria-label="Home"
         >
-          <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform">
-            <Terminal className="w-4 h-4" />
-          </div>
+          <Logo size="md" />
         </a>
 
         {/* Desktop Nav Items (Fully Rounded Capsule Pill) */}
