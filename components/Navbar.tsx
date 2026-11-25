@@ -11,6 +11,7 @@ const navItems = [
   { label: 'Projects', href: '#systems' },
   { label: 'Experience', href: '#experience' },
   { label: 'Skills', href: '#skills' },
+  { label: 'Ask AI', href: '#copilot' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -24,7 +25,7 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
 
-      const sections = ['about', 'systems', 'experience', 'skills', 'contact'];
+      const sections = ['about', 'systems', 'experience', 'skills', 'copilot', 'contact'];
       for (const section of sections) {
         const el = document.getElementById(section);
         if (el) {

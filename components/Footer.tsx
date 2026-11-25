@@ -33,6 +33,7 @@ export default function Footer() {
           <a href="#systems" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Projects</a>
           <a href="#experience" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Experience</a>
           <a href="#skills" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Skills</a>
+          <a href="#copilot" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Ask AI</a>
           <a href="#contact" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contact</a>
         </div>
 
