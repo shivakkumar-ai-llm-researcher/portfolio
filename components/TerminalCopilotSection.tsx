@@ -248,9 +248,9 @@ export default function TerminalCopilotSection() {
     >
       {/* Centered Header */}
       <MotionReveal className="flex flex-col items-center text-center mb-8">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full glass-pill text-blue-600 dark:text-blue-400 text-xs font-semibold mb-4 shadow-sm">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-600 text-white text-xs font-semibold mb-4 shadow-sm shadow-blue-500/20">
           <Terminal className="w-3.5 h-3.5" />
-          <span>Interactive Candidate Copilot</span>
+          <span>INTERACTIVE CANDIDATE COPILOT</span>
         </div>
         <h2 className="font-bold text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white tracking-tight">
           Ask Sivakumar AI — Developer Terminal

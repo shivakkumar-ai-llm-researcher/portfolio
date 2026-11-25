@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { MotionReveal } from './MotionPrimitives';
+import { Sparkles } from 'lucide-react';
 import {
   Mail,
   Copy,
@@ -47,7 +48,8 @@ export default function ContactSection() {
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200/80 dark:border-white/[0.06] scroll-mt-24">
       {/* Section Header */}
       <MotionReveal className="flex flex-col items-center text-center mb-12">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-blue-600 text-white text-xs font-semibold mb-3 shadow-sm shadow-blue-500/20">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-600 text-white text-xs font-semibold mb-3 shadow-sm shadow-blue-500/20">
+          <Sparkles className="w-3.5 h-3.5" />
           <span>GET IN TOUCH</span>
         </div>
         <h2 className="font-bold text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white tracking-tight">

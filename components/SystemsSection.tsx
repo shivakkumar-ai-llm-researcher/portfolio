@@ -141,7 +141,7 @@ export default function SystemsSection() {
       {/* Section Header */}
       <MotionReveal className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
         <div>
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 text-xs font-semibold mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-600 text-white text-xs font-semibold mb-3 shadow-sm shadow-blue-500/20">
             <Sparkles className="w-3.5 h-3.5" />
             <span>FEATURED WORK</span>
           </div>
