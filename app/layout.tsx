@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/ThemeProvider';
-import CustomCursor from '@/components/CustomCursor';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -54,7 +53,6 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased min-h-screen relative overflow-x-hidden transition-colors duration-300">
         <ThemeProvider>
-          <CustomCursor />
           {/* Ambient Background Glows */}
           <div className="fixed inset-0 bg-ambient-vibrant pointer-events-none z-0" />
 
