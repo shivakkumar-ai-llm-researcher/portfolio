@@ -101,9 +101,13 @@ export default function HeroSection() {
         <div className="lg:col-span-5 w-full">
           <div className="clay-card p-6 relative overflow-hidden rounded-3xl">
             {/* Top Identity Block */}
-            <div className="flex items-center gap-3.5 pb-4 border-b border-slate-200 dark:border-white/[0.08]">
-              <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center font-bold text-white text-lg shadow-md shadow-blue-500/25">
-                S
+            <div className="flex items-center gap-4 pb-4 border-b border-slate-200 dark:border-white/[0.08]">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500/15 to-indigo-500/20 dark:from-blue-500/20 dark:to-indigo-500/25 ring-2 ring-blue-500/30 overflow-hidden shrink-0 shadow-md shadow-blue-500/15">
+                <img
+                  src="/profile.png"
+                  alt="Sivakumar"
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
               <div>
                 <div className="flex items-center gap-2">
