@@ -3,18 +3,22 @@
 import React from 'react';
 import {
   ArrowDown,
-  Download,
   Mail,
   Linkedin,
   Github,
   Building,
-  GraduationCap
+  GraduationCap,
+  MapPin,
+  Bot,
+  Cloud,
+  Smartphone,
+  BarChart3
 } from 'lucide-react';
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="relative pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col justify-center min-h-[85vh]">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+    <section id="hero" className="relative pt-28 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col justify-center min-h-[88vh]">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
         {/* Left Column: Personal Introduction & Value Proposition */}
         <div className="lg:col-span-7 flex flex-col items-start">
           {/* Status Badge */}
@@ -34,7 +38,7 @@ export default function HeroSection() {
 
           {/* Concise Summary */}
           <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mb-8">
-            Specializing in agentic multi-agent systems (LangGraph), cloud & LLM inference cost optimization (Fin360 Framework), predictive machine learning (XGBoost), and production mobile applications.
+            Specializing in agentic multi-agent systems (LangGraph), cloud &amp; LLM inference cost optimization (Fin360 Framework), predictive machine learning (XGBoost), and production mobile applications.
           </p>
 
           {/* Action Buttons (Fully Rounded Pills) */}
@@ -70,90 +74,104 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Key Competency Badges (Fully Rounded Pills) */}
-          <div className="flex flex-wrap gap-2 pt-2 border-t border-slate-200/80 dark:border-white/[0.08] w-full">
-            <span className="px-3 py-1 rounded-full glass-pill text-xs text-slate-700 dark:text-slate-300">
-              ⚡ Multi-Agent Orchestration
+          {/* Core Capabilities Pill Tags */}
+          <div className="flex flex-wrap gap-2 pt-5 border-t border-slate-200 dark:border-white/[0.08] w-full">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full glass-pill text-xs text-slate-700 dark:text-slate-300">
+              <Bot className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
+              Multi-Agent Orchestration
             </span>
-            <span className="px-3 py-1 rounded-full glass-pill text-xs text-slate-700 dark:text-slate-300">
-              ☁️ Fin360 Cost Optimization
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full glass-pill text-xs text-slate-700 dark:text-slate-300">
+              <Cloud className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+              Fin360 Cost Optimization
             </span>
-            <span className="px-3 py-1 rounded-full glass-pill text-xs text-slate-700 dark:text-slate-300">
-              📱 React Native Mobile
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full glass-pill text-xs text-slate-700 dark:text-slate-300">
+              <Smartphone className="w-3.5 h-3.5 text-sky-600 dark:text-sky-400" />
+              React Native Mobile
             </span>
-            <span className="px-3 py-1 rounded-full glass-pill text-xs text-slate-700 dark:text-slate-300">
-              📊 Predictive ML & Risk
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full glass-pill text-xs text-slate-700 dark:text-slate-300">
+              <BarChart3 className="w-3.5 h-3.5 text-purple-600 dark:text-purple-400" />
+              Predictive ML &amp; Risk
             </span>
           </div>
         </div>
 
-        {/* Right Column: Clean, Compact Overview Card */}
-        <div className="lg:col-span-5 w-full">
-          <div className="clay-card p-6 relative overflow-hidden rounded-3xl">
-            {/* Top Identity Block */}
-            <div className="flex items-center gap-4 pb-4 border-b border-slate-200 dark:border-white/[0.08]">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500/15 to-indigo-500/20 dark:from-blue-500/20 dark:to-indigo-500/25 ring-2 ring-blue-500/30 overflow-hidden shrink-0 shadow-md shadow-blue-500/15">
-                <img
-                  src="/profile.png"
-                  alt="Sivakumar"
-                  className="w-full h-full object-cover object-top"
-                />
+        {/* Right Column: Featured Portrait & Profile Card */}
+        <div className="lg:col-span-5 w-full max-w-md mx-auto lg:max-w-none">
+          <div className="clay-card relative overflow-hidden rounded-3xl">
+            {/* Prominent Portrait Stage */}
+            <div className="relative h-64 sm:h-72 w-full bg-gradient-to-b from-blue-600/10 via-indigo-600/10 to-slate-100/80 dark:from-blue-600/20 dark:via-indigo-600/15 dark:to-slate-900/80 border-b border-slate-200/80 dark:border-white/[0.08] flex items-end justify-center overflow-hidden pt-4">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(59,130,246,0.22),transparent_65%)] pointer-events-none" />
+              <img
+                src="/profile.png"
+                alt="Sivakumar — AI/ML Engineer"
+                className="relative z-10 h-full w-auto object-contain object-bottom drop-shadow-[0_12px_28px_rgba(15,23,42,0.35)] select-none"
+              />
+              {/* Floating Location Pill */}
+              <div className="absolute top-4 right-4 z-20 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full glass-panel text-[11px] font-medium text-slate-700 dark:text-slate-200">
+                <MapPin className="w-3 h-3 text-blue-600 dark:text-blue-400" />
+                <span>Hyderabad · Coimbatore</span>
               </div>
-              <div>
-                <div className="flex items-center gap-2">
-                  <h2 className="font-bold text-lg text-slate-900 dark:text-white">
-                    Sivakumar
-                  </h2>
-                  <span className="w-2 h-2 rounded-full bg-emerald-500" title="Active" />
+            </div>
+
+            {/* Card Body: Identity, Timeline & Contact */}
+            <div className="p-6">
+              <div className="flex items-center justify-between gap-2 pb-4 border-b border-slate-200 dark:border-white/[0.08]">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <h2 className="font-bold text-lg text-slate-900 dark:text-white">
+                      Sivakumar
+                    </h2>
+                    <span className="w-2 h-2 rounded-full bg-emerald-500" title="Active" />
+                  </div>
+                  <p className="text-xs text-blue-600 dark:text-blue-400 font-semibold">
+                    AI/ML Engineer · Coolgen Solutions
+                  </p>
                 </div>
-                <p className="text-xs text-blue-600 dark:text-blue-400 font-semibold">
-                  AI/ML Engineer · Coolgen Solutions
-                </p>
-                <p className="text-[11px] text-slate-500 dark:text-slate-400">
-                  Hyderabad & Coimbatore, India
-                </p>
-              </div>
-            </div>
-
-            {/* Quick Experience Timeline */}
-            <div className="py-4 space-y-3 border-b border-slate-200 dark:border-white/[0.08]">
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
-                  <Building className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
-                  Coolgen Solutions
+                <span className="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                  Open to Collaborate
                 </span>
-                <span className="text-slate-800 dark:text-slate-200 font-medium">Associate Engineer (2026–Present)</span>
               </div>
 
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
-                  <Building className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-                  Rubixe AI Solutions
+              {/* Quick Experience Timeline */}
+              <div className="py-4 space-y-2.5 border-b border-slate-200 dark:border-white/[0.08]">
+                <div className="flex items-center justify-between text-xs">
+                  <span className="text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+                    <Building className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
+                    Coolgen Solutions
+                  </span>
+                  <span className="text-slate-800 dark:text-slate-200 font-medium">Associate Engineer (2026–Present)</span>
+                </div>
+
+                <div className="flex items-center justify-between text-xs">
+                  <span className="text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+                    <Building className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+                    Rubixe AI Solutions
+                  </span>
+                  <span className="text-slate-800 dark:text-slate-200 font-medium">Data Science (2024)</span>
+                </div>
+
+                <div className="flex items-center justify-between text-xs">
+                  <span className="text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+                    <GraduationCap className="w-3.5 h-3.5 text-purple-600 dark:text-purple-400" />
+                    Prathyusha Eng. College
+                  </span>
+                  <span className="text-slate-800 dark:text-slate-200 font-medium">B.Tech IT (2020–2024)</span>
+                </div>
+              </div>
+
+              {/* Quick Contact Line */}
+              <div className="pt-3.5 flex items-center justify-between text-xs text-slate-600 dark:text-slate-400">
+                <span className="flex items-center gap-1.5 truncate">
+                  <Mail className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+                  <span className="truncate">shivakkumarc@gmail.com</span>
                 </span>
-                <span className="text-slate-800 dark:text-slate-200 font-medium">Data Science (2024)</span>
+                <a
+                  href="#contact"
+                  className="text-blue-600 dark:text-blue-400 hover:underline shrink-0 font-semibold ml-2"
+                >
+                  Connect →
+                </a>
               </div>
-
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
-                  <GraduationCap className="w-3.5 h-3.5 text-purple-600 dark:text-purple-400" />
-                  Prathyusha Eng. College
-                </span>
-                <span className="text-slate-800 dark:text-slate-200 font-medium">B.Tech IT (2020–2024)</span>
-              </div>
-            </div>
-
-            {/* Quick Contact Line */}
-            <div className="pt-3.5 flex items-center justify-between text-xs text-slate-600 dark:text-slate-400">
-              <span className="flex items-center gap-1.5 truncate">
-                <Mail className="w-3.5 h-3.5 text-slate-400 shrink-0" />
-                <span className="truncate">shivakkumarc@gmail.com</span>
-              </span>
-              <a
-                href="#contact"
-                className="text-blue-600 dark:text-blue-400 hover:underline shrink-0 font-semibold ml-2"
-              >
-                Connect →
-              </a>
             </div>
           </div>
         </div>
