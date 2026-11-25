@@ -136,7 +136,7 @@ export default function ContactSection() {
               <span className="text-xs text-slate-700 dark:text-slate-300 font-semibold">Send a Direct Message</span>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 gap-3.5">
               <div>
                 <label className="block text-xs text-slate-600 dark:text-slate-400 mb-1 font-medium">Your Name</label>
                 <input
