@@ -3,6 +3,7 @@ import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import SystemsSection from '@/components/SystemsSection';
 import ExperienceSection from '@/components/ExperienceSection';
+import EducationCertifications from '@/components/EducationCertifications';
 import SkillsSection from '@/components/SkillsSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
@@ -15,6 +16,7 @@ export default function Home() {
       <AboutSection />
       <SystemsSection />
       <ExperienceSection />
+      <EducationCertifications />
       <SkillsSection />
       <ContactSection />
       <Footer />

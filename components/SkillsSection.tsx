@@ -15,11 +15,13 @@ const skills: Skill[] = [
   { name: 'LangGraph', category: 'agentic', level: 'Production', context: 'Supervisor agent state machines, cyclic loops & self-correction' },
   { name: 'LangChain', category: 'agentic', level: 'Production', context: 'Multi-agent chains, dynamic tool binding, and RAG retrieval' },
   { name: 'Multi-Agent Systems', category: 'agentic', level: 'Advanced', context: 'Autonomous plan-and-solve agent topologies & human review' },
+  { name: 'AutoGen', category: 'agentic', level: 'Advanced', context: 'Multi-agent conversation orchestration and autonomous tool execution' },
   { name: 'RAG & Vector Search', category: 'agentic', level: 'Production', context: 'Dense/sparse search, chunking, and Redis vector caching' },
   { name: 'Prompt Engineering', category: 'agentic', level: 'Advanced', context: 'Few-shot structured JSON extraction, guardrails & evaluation' },
 
   // Model & ML
   { name: 'XGBoost & Scikit-Learn', category: 'ml', level: 'Production', context: 'Credit risk prediction evaluated on Gini coefficient & rank ordering' },
+  { name: 'Reinforcement Learning', category: 'ml', level: 'Applied', context: 'Decision-making agent policies and reward-driven optimization' },
   { name: 'Feature Engineering', category: 'ml', level: 'Production', context: 'Enriching customer transaction, enquiry, and demographic data' },
   { name: 'PyTorch', category: 'ml', level: 'Advanced', context: 'Deep learning model forward passes and fine-tuning' },
   { name: 'Predictive Modeling', category: 'ml', level: 'Production', context: 'Risk classification and applicant credit scoring pipelines' },
@@ -34,6 +36,7 @@ const skills: Skill[] = [
   // Mobile & Frontend
   { name: 'React Native', category: 'mobile', level: 'Production', context: 'Cross-platform mobile application development at Coolgen Solutions' },
   { name: 'Android Development', category: 'mobile', level: 'Production', context: 'Native Android architecture, responsive layouts, and API integration' },
+  { name: 'WordPress Development', category: 'mobile', level: 'Top Skill', context: 'Custom themes, enterprise web portals, and CMS integrations' },
   { name: 'Next.js & TypeScript', category: 'mobile', level: 'Production', context: 'Modern web applications with server-side rendering and type safety' },
 ];
 

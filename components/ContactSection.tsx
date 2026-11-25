@@ -77,6 +77,9 @@ export default function ContactSection() {
                 {copied ? <Check className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4" />}
               </button>
             </div>
+            <p className="text-[11px] text-slate-500 dark:text-slate-400 mb-1">
+              Alternate: <span className="select-all text-slate-700 dark:text-slate-300 font-medium">sivakumarcgbtech@gmail.com</span>
+            </p>
             {copied && (
               <p className="text-[11px] text-emerald-600 dark:text-emerald-400 flex items-center gap-1 font-medium">
                 <Check className="w-3.5 h-3.5" />
@@ -104,7 +107,7 @@ export default function ContactSection() {
             </a>
 
             <a
-              href="https://github.com/Shiva-kkumar"
+              href="https://github.com/shivakkumar-ai-llm-researcher"
               target="_blank"
               rel="noopener noreferrer"
               className="clay-card p-4 group flex flex-col justify-between hover:-translate-y-0.5 transition-all"
