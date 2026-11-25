@@ -155,3 +155,10 @@ body {
     radial-gradient(circle at 50% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 45%),
     radial-gradient(circle at 80% 90%, rgba(244, 63, 94, 0.08) 0%, transparent 40%);
 }
+
+@media (pointer: fine) {
+  .custom-cursor-active,
+  .custom-cursor-active * {
+    cursor: none !important;
+  }
+}
