@@ -299,7 +299,7 @@ export default function TerminalCopilotSection() {
         {/* Scrollable Terminal Output */}
         <div
           ref={bodyRef}
-          className="p-5 sm:p-6 font-mono text-xs sm:text-[13px] leading-relaxed space-y-3.5 max-h-[380px] overflow-y-auto"
+          className="p-5 sm:p-6 font-mono text-xs sm:text-[13px] leading-relaxed space-y-3.5 max-h-[380px] overflow-y-auto terminal-scrollbar"
         >
           {lines.map((line) => {
             if (line.type === 'command') {
