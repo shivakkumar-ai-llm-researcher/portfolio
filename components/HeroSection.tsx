@@ -47,19 +47,9 @@ export default function HeroSection() {
               <ArrowDown className="w-4 h-4" />
             </a>
 
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="clay-btn px-6 py-3 rounded-full text-xs uppercase tracking-wider font-semibold text-slate-800 dark:text-slate-200 flex items-center justify-center gap-2 w-full sm:w-auto"
-            >
-              <Download className="w-4 h-4 text-slate-500 dark:text-slate-400" />
-              <span>Resume (CV)</span>
-            </a>
-
             <div className="flex items-center gap-2">
               <a
-                href="https://github.com/Shiva-kkumar"
+                href="https://github.com/shivakkumar-ai-llm-researcher"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="clay-btn p-3 rounded-full text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-white"

@@ -118,29 +118,10 @@ export default function ContactSection() {
               </div>
               <div>
                 <span className="font-bold text-slate-900 dark:text-white text-xs block">GitHub</span>
-                <span className="text-[11px] text-slate-500 dark:text-slate-400 truncate block">@Shiva-kkumar</span>
+                <span className="text-[11px] text-slate-500 dark:text-slate-400 truncate block">@shivakkumar-ai-llm-researcher</span>
               </div>
             </a>
           </div>
-
-          {/* Download Resume Card */}
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="clay-card p-4 flex items-center justify-between group hover:-translate-y-0.5 transition-all"
-          >
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-sm shadow-blue-500/25">
-                <Download className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
-              </div>
-              <div>
-                <span className="font-bold text-slate-900 dark:text-white text-xs block">Official Resume (CV)</span>
-                <span className="text-[11px] text-slate-500 dark:text-slate-400">PDF · Verified Experience & Projects</span>
-              </div>
-            </div>
-            <ArrowUpRight className="w-4 h-4 text-blue-600" />
-          </a>
         </div>
 
         {/* Right Column: Quick Message Form */}

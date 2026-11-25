@@ -94,17 +94,6 @@ export default function Navbar() {
             )}
           </button>
 
-          {/* Resume Download */}
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden sm:flex items-center gap-1.5 px-3.5 py-1.5 rounded-full glass-pill text-xs text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition-all font-medium"
-          >
-            <Download className="w-3.5 h-3.5 text-slate-500 dark:text-slate-400" />
-            <span>CV</span>
-          </a>
-
           {/* Connect Button */}
           <a
             href="#contact"
@@ -143,15 +132,6 @@ export default function Navbar() {
           </div>
 
           <div className="pt-3 border-t border-slate-200 dark:border-white/[0.08] flex items-center gap-2">
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 py-2 rounded-full glass-pill text-center text-xs text-slate-700 dark:text-slate-300 flex items-center justify-center gap-1.5"
-            >
-              <Download className="w-3.5 h-3.5" />
-              <span>Resume PDF</span>
-            </a>
             <a
               href="#contact"
               onClick={() => setMobileMenuOpen(false)}
