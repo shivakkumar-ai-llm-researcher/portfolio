@@ -201,7 +201,7 @@ export default function HeroSection() {
                 style={{ transform: 'translateZ(60px)' }}
               >
                 <MapPin className="w-3 h-3 text-blue-600 dark:text-blue-400" />
-                <span>Hyderabad · Coimbatore</span>
+                <span>Cuddalore, India</span>
               </div>
             </div>
 
@@ -217,6 +217,9 @@ export default function HeroSection() {
                   </div>
                   <p className="text-xs text-blue-600 dark:text-blue-400 font-semibold">
                     AI/ML Engineer · Coolgen Solutions
+                  </p>
+                  <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">
+                    Preferred: Chennai · Hyderabad · Bangalore
                   </p>
                 </div>
                 <span className="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">

@@ -53,7 +53,7 @@ export default function ContactSection() {
           Let&apos;s build something together.
         </h2>
         <p className="text-slate-600 dark:text-slate-400 text-sm mt-1.5 max-w-lg">
-          Open to opportunities in Agentic AI, Multi-Agent Systems, and Full-Stack Engineering.
+          Based in Cuddalore — open to opportunities in Chennai, Hyderabad &amp; Bangalore for Agentic AI, Multi-Agent Systems, and Full-Stack Engineering.
         </p>
       </div>
 

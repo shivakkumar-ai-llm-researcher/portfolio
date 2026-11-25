@@ -23,7 +23,7 @@ export default function Footer() {
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
             <span>AI/ML Engineer</span>
             <span>·</span>
-            <span>Hyderabad & Coimbatore, India</span>
+            <span>Cuddalore, India · Open to Chennai, Hyderabad &amp; Bangalore</span>
           </div>
         </div>
 
