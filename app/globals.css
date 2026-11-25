@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-canvas: #F8FAFC;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-subtle: #94A3B8;
+
+  --glass-bg: rgba(255, 255, 255, 0.82);
+  --glass-border: rgba(226, 232, 240, 0.9);
+  --glass-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+
+  --clay-bg: #FFFFFF;
+  --clay-shadow-out: 8px 8px 20px rgba(203, 213, 225, 0.6), -8px -8px 20px rgba(255, 255, 255, 0.95);
+  --clay-inner-hi: inset 0 1px 1px rgba(255, 255, 255, 1);
+}
+
+.dark {
+  --bg-canvas: #0A0F1D;
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+  --text-subtle: #64748B;
+
+  --glass-bg: rgba(15, 23, 42, 0.82);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 12px 35px -10px rgba(0, 0, 0, 0.6);
+
+  --clay-bg: #111827;
+  --clay-shadow-out: 8px 8px 24px #04060c, -6px -6px 16px rgba(255, 255, 255, 0.03);
+  --clay-inner-hi: inset 0 1px 1px rgba(255, 255, 255, 0.09);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, button, input, textarea, select {
+  font-family: var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+body {
+  background-color: var(--bg-canvas);
+  color: var(--text-main);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+::selection {
+  background: rgba(37, 99, 235, 0.25);
+  color: #2563EB;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-canvas);
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #1E293B;
+}
+
+/* ==========================================================================
+   GLASSMORPHISM
+   ========================================================================== */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  transition: all 0.25s ease;
+}
+
+.glass-panel:hover {
+  border-color: rgba(37, 99, 235, 0.4);
+}
+
+.glass-pill {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  transition: all 0.2s ease;
+}
+
+/* ==========================================================================
+   CLAYMORPHISM
+   ========================================================================== */
+.clay-card {
+  background: var(--clay-bg);
+  box-shadow: var(--clay-shadow-out), var(--clay-inner-hi);
+  border-radius: 20px;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.dark .clay-card {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.clay-card:hover {
+  transform: translateY(-2px);
+}
+
+.clay-btn {
+  background: var(--clay-bg);
+  box-shadow: 4px 4px 10px rgba(203, 213, 225, 0.7), -4px -4px 10px rgba(255, 255, 255, 0.95), var(--clay-inner-hi);
+  border-radius: 12px;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+.dark .clay-btn {
+  box-shadow: 4px 4px 12px #04060c, -3px -3px 10px rgba(255, 255, 255, 0.03), var(--clay-inner-hi);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.clay-btn:hover {
+  transform: translateY(-1.5px);
+}
+.clay-btn:active {
+  transform: translateY(1px);
+}
+
+/* Rich Ambient Glow */
+.bg-ambient-vibrant {
+  background-image: 
+    radial-gradient(circle at 10% 10%, rgba(59, 130, 246, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 90% 20%, rgba(99, 102, 241, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 80% 90%, rgba(244, 63, 94, 0.08) 0%, transparent 40%);
+}
+
+.dark .bg-ambient-vibrant {
+  background-image: 
+    radial-gradient(circle at 10% 10%, rgba(59, 130, 246, 0.15) 0%, transparent 45%),
+    radial-gradient(circle at 90% 20%, rgba(99, 102, 241, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 45%),
+    radial-gradient(circle at 80% 90%, rgba(244, 63, 94, 0.08) 0%, transparent 40%);
+}
