@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { MotionReveal } from './MotionPrimitives';
 import {
   Mail,
   Copy,
@@ -45,7 +46,7 @@ export default function ContactSection() {
   return (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200/80 dark:border-white/[0.06] scroll-mt-24">
       {/* Section Header */}
-      <div className="flex flex-col items-center text-center mb-12">
+      <MotionReveal className="flex flex-col items-center text-center mb-12">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-blue-600 text-white text-xs font-semibold mb-3 shadow-sm shadow-blue-500/20">
           <span>GET IN TOUCH</span>
         </div>
@@ -55,11 +56,11 @@ export default function ContactSection() {
         <p className="text-slate-600 dark:text-slate-400 text-sm mt-1.5 max-w-lg">
           Based in Cuddalore — open to opportunities in Chennai, Hyderabad &amp; Bangalore for Agentic AI, Multi-Agent Systems, and Full-Stack Engineering.
         </p>
-      </div>
+      </MotionReveal>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* Left Column: Direct Links & Resume */}
-        <div className="lg:col-span-5 flex flex-col gap-3.5">
+        <MotionReveal delay={0.05} className="lg:col-span-5 flex flex-col gap-3.5">
           {/* Email Copy Card */}
           <div className="clay-card p-5">
             <span className="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider block mb-2 font-semibold">
@@ -122,10 +123,10 @@ export default function ContactSection() {
               </div>
             </a>
           </div>
-        </div>
+        </MotionReveal>
 
         {/* Right Column: Quick Message Form */}
-        <div className="lg:col-span-7">
+        <MotionReveal delay={0.1} className="lg:col-span-7">
           <form
             onSubmit={handleSendMessage}
             className="glass-panel p-6 sm:p-7 rounded-2xl space-y-3.5"
@@ -187,7 +188,7 @@ export default function ContactSection() {
               </p>
             )}
           </form>
-        </div>
+        </MotionReveal>
       </div>
     </section>
   );

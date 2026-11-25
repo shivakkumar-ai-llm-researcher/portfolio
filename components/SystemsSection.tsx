@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { MotionReveal, MotionStaggerGrid, MotionStaggerItem } from './MotionPrimitives';
 import {
   ExternalLink,
   Layers,
@@ -138,7 +139,7 @@ export default function SystemsSection() {
   return (
     <section id="systems" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200/80 dark:border-white/[0.06] scroll-mt-24">
       {/* Section Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+      <MotionReveal className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
         <div>
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 text-xs font-semibold mb-3">
             <Sparkles className="w-3.5 h-3.5" />
@@ -176,15 +177,15 @@ export default function SystemsSection() {
             );
           })}
         </div>
-      </div>
+      </MotionReveal>
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <MotionStaggerGrid key={activeCategory} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {filteredProjects.map((item) => (
-          <div
-            key={item.id}
-            className={`glass-panel p-6 rounded-3xl flex flex-col justify-between group hover:-translate-y-1.5 transition-all h-full ${item.accentBorder}`}
-          >
+          <MotionStaggerItem key={item.id} className="h-full">
+            <div
+              className={`glass-panel p-6 rounded-3xl flex flex-col justify-between group hover:-translate-y-1.5 transition-all h-full ${item.accentBorder}`}
+            >
             <div>
               {/* Header Badge */}
               <div className="flex items-center justify-between mb-3">
@@ -229,8 +230,9 @@ export default function SystemsSection() {
               ))}
             </div>
           </div>
+          </MotionStaggerItem>
         ))}
-      </div>
+      </MotionStaggerGrid>
     </section>
   );
 }

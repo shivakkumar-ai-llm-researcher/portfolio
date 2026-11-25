@@ -8,6 +8,7 @@ import {
   Smartphone,
   Sparkles
 } from 'lucide-react';
+import { MotionReveal, MotionStaggerGrid, MotionStaggerItem } from './MotionPrimitives';
 
 export default function AboutSection() {
   const pillars = [
@@ -48,7 +49,7 @@ export default function AboutSection() {
   return (
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200/80 dark:border-white/[0.06] scroll-mt-24">
       {/* Section Header */}
-      <div className="flex flex-col items-start mb-12">
+      <MotionReveal className="flex flex-col items-start mb-12">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-600 text-white text-xs font-semibold mb-3 shadow-sm shadow-blue-500/20">
           <Sparkles className="w-3.5 h-3.5" />
           <span>ABOUT ME</span>
@@ -59,40 +60,41 @@ export default function AboutSection() {
         <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base mt-2 max-w-3xl leading-relaxed">
           AI/ML Engineer at Coolgen Solutions with a background in data science and mobile platforms. Specializing in autonomous multi-agent orchestration, cloud inference cost optimization, and production-ready applications.
         </p>
-      </div>
+      </MotionReveal>
 
       {/* Symmetrical 4-Card Grid with Vibrant Icon Badges */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <MotionStaggerGrid className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {pillars.map((pillar) => (
-          <div
-            key={pillar.title}
-            className={`clay-card p-6 flex flex-col justify-between group hover:-translate-y-1 transition-all h-full rounded-3xl ${pillar.hoverBorder}`}
-          >
-            <div>
-              <div className={`w-11 h-11 rounded-2xl ${pillar.iconBg} mb-4 flex items-center justify-center group-hover:scale-105 transition-transform`}>
-                {pillar.icon}
+          <MotionStaggerItem key={pillar.title} className="h-full">
+            <div
+              className={`clay-card p-6 flex flex-col justify-between group hover:-translate-y-1 transition-all h-full rounded-3xl ${pillar.hoverBorder}`}
+            >
+              <div>
+                <div className={`w-11 h-11 rounded-2xl ${pillar.iconBg} mb-4 flex items-center justify-center group-hover:scale-105 transition-transform`}>
+                  {pillar.icon}
+                </div>
+                <h3 className="font-bold text-base text-slate-900 dark:text-white mb-2">
+                  {pillar.title}
+                </h3>
+                <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                  {pillar.summary}
+                </p>
               </div>
-              <h3 className="font-bold text-base text-slate-900 dark:text-white mb-2">
-                {pillar.title}
-              </h3>
-              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
-                {pillar.summary}
-              </p>
-            </div>
 
-            <div className="pt-3 border-t border-slate-100 dark:border-white/[0.06] flex flex-wrap gap-1.5">
-              {pillar.stack.map((item) => (
-                <span
-                  key={item}
-                  className="text-[10px] px-2.5 py-0.5 rounded-full glass-pill text-slate-700 dark:text-slate-300 font-medium"
-                >
-                  {item}
-                </span>
-              ))}
+              <div className="pt-3 border-t border-slate-100 dark:border-white/[0.06] flex flex-wrap gap-1.5">
+                {pillar.stack.map((item) => (
+                  <span
+                    key={item}
+                    className="text-[10px] px-2.5 py-0.5 rounded-full glass-pill text-slate-700 dark:text-slate-300 font-medium"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          </MotionStaggerItem>
         ))}
-      </div>
+      </MotionStaggerGrid>
     </section>
   );
 }

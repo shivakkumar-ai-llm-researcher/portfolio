@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
+import { MotionReveal } from './MotionPrimitives';
 import {
   Terminal,
   Star,
@@ -246,7 +247,7 @@ export default function TerminalCopilotSection() {
       className="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto border-t border-slate-200/80 dark:border-white/[0.06] scroll-mt-24"
     >
       {/* Centered Header */}
-      <div className="flex flex-col items-center text-center mb-8">
+      <MotionReveal className="flex flex-col items-center text-center mb-8">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full glass-pill text-blue-600 dark:text-blue-400 text-xs font-semibold mb-4 shadow-sm">
           <Terminal className="w-3.5 h-3.5" />
           <span>Interactive Candidate Copilot</span>
@@ -257,10 +258,10 @@ export default function TerminalCopilotSection() {
         <p className="text-slate-600 dark:text-slate-400 text-sm mt-2 max-w-2xl leading-relaxed">
           Query candidate background, production AI implementations, Fin360 architecture, and interview fit via command line or natural prompts.
         </p>
-      </div>
+      </MotionReveal>
 
       {/* Quick Command Pill Bar */}
-      <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
+      <MotionReveal delay={0.05} className="flex flex-wrap items-center justify-center gap-2 mb-6">
         {quickButtons.map((btn) => (
           <button
             key={btn.cmd}
@@ -272,13 +273,14 @@ export default function TerminalCopilotSection() {
             <span>{btn.label}</span>
           </button>
         ))}
-      </div>
+      </MotionReveal>
 
       {/* Interactive Dark Terminal Window */}
-      <div
-        onClick={() => inputRef.current?.focus()}
-        className="rounded-2xl overflow-hidden border border-slate-300/80 dark:border-white/[0.1] bg-[#0B1120] shadow-2xl shadow-slate-900/20 dark:shadow-black/60 cursor-text"
-      >
+      <MotionReveal delay={0.1}>
+        <div
+          onClick={() => inputRef.current?.focus()}
+          className="rounded-2xl overflow-hidden border border-slate-300/80 dark:border-white/[0.1] bg-[#0B1120] shadow-2xl shadow-slate-900/20 dark:shadow-black/60 cursor-text"
+        >
         {/* Window Title Bar */}
         <div className="px-4 py-3 bg-[#111827] border-b border-white/[0.08] flex items-center justify-between">
           <div className="flex items-center gap-2">
@@ -359,6 +361,7 @@ export default function TerminalCopilotSection() {
           </form>
         </div>
       </div>
+      </MotionReveal>
     </section>
   );
 }

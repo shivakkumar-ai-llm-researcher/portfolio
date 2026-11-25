@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { MotionReveal, MotionStaggerGrid, MotionStaggerItem } from './MotionPrimitives';
 import {
   Calendar,
   MapPin,
@@ -110,7 +111,7 @@ export default function ExperienceSection() {
   return (
     <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200/80 dark:border-white/[0.06] scroll-mt-24">
       {/* Section Header */}
-      <div className="flex flex-col items-start mb-12">
+      <MotionReveal className="flex flex-col items-start mb-12">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-600 text-white text-xs font-semibold mb-3 shadow-sm shadow-blue-500/20">
           <Sparkles className="w-3.5 h-3.5" />
           <span>CAREER TRAJECTORY</span>
@@ -121,15 +122,15 @@ export default function ExperienceSection() {
         <p className="text-slate-600 dark:text-slate-400 text-sm mt-1.5 max-w-2xl leading-relaxed">
           Progression from predictive machine learning and mobile development to enterprise agentic systems.
         </p>
-      </div>
+      </MotionReveal>
 
       {/* Modern 2-Column Bento Grid Layout (No cavernous empty space!) */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <MotionStaggerGrid className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {experiences.map((exp) => (
-          <div
-            key={exp.company + exp.role}
-            className={`clay-card p-6 rounded-3xl flex flex-col justify-between group hover:-translate-y-1 transition-all h-full ${exp.accentBorder}`}
-          >
+          <MotionStaggerItem key={exp.company + exp.role} className="h-full">
+            <div
+              className={`clay-card p-6 rounded-3xl flex flex-col justify-between group hover:-translate-y-1 transition-all h-full ${exp.accentBorder}`}
+            >
             <div>
               {/* Header: Company Avatar + Role + Metadata */}
               <div className="flex items-start justify-between gap-3 mb-4">
@@ -189,8 +190,9 @@ export default function ExperienceSection() {
               ))}
             </div>
           </div>
+          </MotionStaggerItem>
         ))}
-      </div>
+      </MotionStaggerGrid>
     </section>
   );
 }

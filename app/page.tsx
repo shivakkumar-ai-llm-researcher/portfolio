@@ -1,4 +1,5 @@
 import Navbar from '@/components/Navbar';
+import { ScrollProgressBar } from '@/components/MotionPrimitives';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import SystemsSection from '@/components/SystemsSection';
@@ -12,6 +13,7 @@ import Footer from '@/components/Footer';
 export default function Home() {
   return (
     <main className="relative min-h-screen">
+      <ScrollProgressBar />
       <Navbar />
       <HeroSection />
       <AboutSection />

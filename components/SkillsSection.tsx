@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Search, Sparkles } from 'lucide-react';
+import { MotionReveal, MotionStaggerGrid, MotionStaggerItem } from './MotionPrimitives';
 
 interface Skill {
   name: string;
@@ -78,7 +79,7 @@ export default function SkillsSection() {
   return (
     <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200/80 dark:border-white/[0.06] scroll-mt-24">
       {/* Section Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+      <MotionReveal className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
         <div>
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 text-xs font-semibold mb-3">
             <Sparkles className="w-3.5 h-3.5" />
@@ -100,10 +101,10 @@ export default function SkillsSection() {
             className="w-full pl-9 pr-3.5 py-2 rounded-full bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 shadow-sm"
           />
         </div>
-      </div>
+      </MotionReveal>
 
       {/* Category Pills (Fully Rounded) */}
-      <div className="flex items-center gap-2 overflow-x-auto pb-3 mb-6 scrollbar-none">
+      <MotionReveal delay={0.05} className="flex items-center gap-2 overflow-x-auto pb-3 mb-6 scrollbar-none">
         {categories.map((cat) => {
           const isActive = activeCategory === cat.id;
           return (
@@ -120,15 +121,15 @@ export default function SkillsSection() {
             </button>
           );
         })}
-      </div>
+      </MotionReveal>
 
       {/* Skills Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+      <MotionStaggerGrid key={activeCategory + searchQuery} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
         {filteredSkills.map((skill) => (
-          <div
-            key={skill.name}
-            className="clay-card p-5 flex flex-col justify-between group hover:-translate-y-0.5 hover:border-blue-500/40 transition-all rounded-3xl"
-          >
+          <MotionStaggerItem key={skill.name}>
+            <div
+              className="clay-card p-5 flex flex-col justify-between group hover:-translate-y-0.5 hover:border-blue-500/40 transition-all rounded-3xl h-full"
+            >
             <div>
               <div className="flex items-center justify-between mb-1.5">
                 <h3 className="font-bold text-sm text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
@@ -143,8 +144,9 @@ export default function SkillsSection() {
               </p>
             </div>
           </div>
+          </MotionStaggerItem>
         ))}
-      </div>
+      </MotionStaggerGrid>
     </section>
   );
 }
