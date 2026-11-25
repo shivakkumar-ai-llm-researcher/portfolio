@@ -94,7 +94,7 @@ export default function ContactSection() {
           {/* Social Profiles Grid */}
           <div className="grid grid-cols-2 gap-3.5">
             <a
-              href="https://www.linkedin.com/in/shivakkumarg"
+              href="https://www.linkedin.com/in/shivakumar-developer/"
               target="_blank"
               rel="noopener noreferrer"
               className="clay-card p-4 group flex flex-col justify-between hover:-translate-y-0.5 transition-all"
@@ -105,7 +105,7 @@ export default function ContactSection() {
               </div>
               <div>
                 <span className="font-bold text-slate-900 dark:text-white text-xs block">LinkedIn</span>
-                <span className="text-[11px] text-slate-500 dark:text-slate-400 truncate block">/in/shivakkumarg</span>
+                <span className="text-[11px] text-slate-500 dark:text-slate-400 truncate block">/in/shivakumar-developer</span>
               </div>
             </a>
 

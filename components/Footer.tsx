@@ -49,7 +49,7 @@ export default function Footer() {
             <Github className="w-4 h-4" />
           </a>
           <a
-            href="https://www.linkedin.com/in/shivakkumarg"
+            href="https://www.linkedin.com/in/shivakumar-developer/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 rounded-xl clay-btn text-slate-600 dark:text-slate-400 hover:text-blue-600"

@@ -106,7 +106,7 @@ export default function HeroSection() {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/shivakkumarg"
+                href="https://www.linkedin.com/in/shivakumar-developer/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="clay-btn p-3 rounded-full text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-white"

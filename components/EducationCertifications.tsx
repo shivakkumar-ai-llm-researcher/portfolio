@@ -96,7 +96,7 @@ export default function EducationCertifications() {
           <div className="mt-5 pt-3.5 border-t border-slate-100 dark:border-white/[0.06] text-[11px] flex items-center justify-between">
             <span className="text-slate-500 dark:text-slate-400">Medium Publication</span>
             <a
-              href="https://www.linkedin.com/in/shivakkumarg"
+              href="https://www.linkedin.com/in/shivakumar-developer/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1 font-semibold"

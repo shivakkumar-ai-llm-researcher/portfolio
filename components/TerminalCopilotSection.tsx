@@ -157,7 +157,7 @@ function buildResponse(rawInput: string): { title?: string; segments: { text: st
         { text: '• Emails: ', color: 'text-amber-400', bold: true },
         { text: 'shivakkumarc@gmail.com  |  sivakumarcgbtech@gmail.com\n', color: 'text-slate-300' },
         { text: '• Profiles: ', color: 'text-violet-400', bold: true },
-        { text: 'linkedin.com/in/shivakkumarg  |  github.com/shivakkumar-ai-llm-researcher', color: 'text-slate-300' },
+        { text: 'linkedin.com/in/shivakumar-developer  |  github.com/shivakkumar-ai-llm-researcher', color: 'text-slate-300' },
       ],
     };
   }
