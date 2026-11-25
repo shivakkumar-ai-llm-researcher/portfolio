@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Github, Menu, X, ArrowUpRight, Sun, Moon } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
 import Logo from './Logo';
@@ -80,18 +81,76 @@ export default function Navbar() {
 
         {/* Action Controls (Fully Rounded Pills) */}
         <div className="flex items-center gap-2 sm:gap-2.5">
-          {/* Light / Dark Mode Toggle Button */}
+          {/* Animated Day / Night Toggle Switch */}
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-full clay-btn text-slate-700 dark:text-slate-300 hover:text-blue-600 transition-colors"
+            role="switch"
+            aria-checked={theme === 'dark'}
             title={theme === 'dark' ? 'Switch to Light Theme' : 'Switch to Dark Theme'}
             aria-label="Toggle Theme"
+            className={`relative w-14 h-7 rounded-full p-0.5 transition-colors duration-300 shadow-inner border cursor-pointer flex items-center ${
+              theme === 'dark'
+                ? 'bg-gradient-to-r from-slate-800 via-indigo-950 to-slate-900 border-indigo-500/30'
+                : 'bg-gradient-to-r from-sky-400 via-blue-400 to-blue-500 border-sky-300/60'
+            }`}
           >
-            {theme === 'dark' ? (
-              <Sun className="w-4 h-4 text-amber-400 rotate-0 transition-transform hover:rotate-45" />
-            ) : (
-              <Moon className="w-4 h-4 text-blue-600 -rotate-12 transition-transform hover:rotate-0" />
-            )}
+            {/* Background Sky / Stars Micro-Accents */}
+            <span
+              aria-hidden="true"
+              className={`absolute left-2 w-1 h-1 rounded-full bg-white transition-all duration-300 ${
+                theme === 'dark' ? 'opacity-80 scale-100' : 'opacity-0 scale-0'
+              }`}
+            />
+            <span
+              aria-hidden="true"
+              className={`absolute left-4 top-1.5 w-0.5 h-0.5 rounded-full bg-indigo-200 transition-all duration-300 ${
+                theme === 'dark' ? 'opacity-90 scale-100' : 'opacity-0 scale-0'
+              }`}
+            />
+            <span
+              aria-hidden="true"
+              className={`absolute right-2.5 w-1.5 h-1.5 rounded-full bg-white/80 transition-all duration-300 ${
+                theme === 'dark' ? 'opacity-0 scale-0' : 'opacity-90 scale-100'
+              }`}
+            />
+
+            {/* Spring-Animated Sliding Thumb */}
+            <motion.span
+              layout
+              animate={{ x: theme === 'dark' ? 28 : 0 }}
+              transition={{ type: 'spring', stiffness: 520, damping: 32 }}
+              className={`relative z-10 w-6 h-6 rounded-full flex items-center justify-center shadow-md ${
+                theme === 'dark'
+                  ? 'bg-slate-900 text-indigo-300 ring-1 ring-indigo-400/40'
+                  : 'bg-white text-amber-500 ring-1 ring-amber-200/80'
+              }`}
+            >
+              <AnimatePresence mode="wait" initial={false}>
+                {theme === 'dark' ? (
+                  <motion.span
+                    key="moon"
+                    initial={{ rotate: -60, scale: 0.6, opacity: 0 }}
+                    animate={{ rotate: 0, scale: 1, opacity: 1 }}
+                    exit={{ rotate: 60, scale: 0.6, opacity: 0 }}
+                    transition={{ duration: 0.18 }}
+                    className="flex items-center justify-center"
+                  >
+                    <Moon className="w-3.5 h-3.5" />
+                  </motion.span>
+                ) : (
+                  <motion.span
+                    key="sun"
+                    initial={{ rotate: 60, scale: 0.6, opacity: 0 }}
+                    animate={{ rotate: 0, scale: 1, opacity: 1 }}
+                    exit={{ rotate: -60, scale: 0.6, opacity: 0 }}
+                    transition={{ duration: 0.18 }}
+                    className="flex items-center justify-center"
+                  >
+                    <Sun className="w-3.5 h-3.5" />
+                  </motion.span>
+                )}
+              </AnimatePresence>
+            </motion.span>
           </button>
 
           {/* GitHub Profile */}
