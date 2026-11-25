@@ -62,29 +62,22 @@ export default function CustomCursor() {
       }`}
       style={{ transform: 'translate3d(-100px, -100px, 0)' }}
     >
-      {/* Subtle interactive halo on clickable elements */}
-      <div
-        className={`absolute -top-3 -left-3 w-7 h-7 rounded-full border border-blue-500/60 bg-blue-500/10 transition-all duration-200 ${
-          isPointer ? 'scale-110 opacity-100' : 'scale-50 opacity-0'
-        }`}
-      />
-
-      {/* Crisp, zero-lag custom vector pointer */}
+      {/* Crisp, zero-lag custom vector pointer aligned at tip (0,0) */}
       <svg
-        width="24"
-        height="24"
+        width="22"
+        height="22"
         viewBox="0 0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className={`drop-shadow-[0_2px_6px_rgba(37,99,235,0.45)] transition-transform duration-100 origin-top-left ${
+        className={`-translate-x-[2px] -translate-y-[2px] drop-shadow-[0_2px_6px_rgba(37,99,235,0.45)] transition-transform duration-100 origin-top-left ${
           isPressed ? 'scale-90' : isPointer ? 'scale-110' : 'scale-100'
         }`}
       >
         <path
-          d="M4 3L19.5 11.2L12.4 13.4L9.2 20.2L4 3Z"
+          d="M2 2L19 10.6L11.8 13L8.6 20L2 2Z"
           fill={isPointer ? '#2563EB' : '#3B82F6'}
           stroke="#FFFFFF"
-          strokeWidth="1.75"
+          strokeWidth="1.8"
           strokeLinejoin="round"
         />
       </svg>
